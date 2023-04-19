@@ -3,9 +3,11 @@
 int main(int arc, char **argv)
 {
 	char *user_imput = "(my_sh) c:\\>>$ ";  /* prompt */
-	char *lineptr; /* to sotre buffer direction, contains what is written.  [getline function] */
+	char *lineptr = NULL; /* to sotre buffer direction, contains what is written.[getline function]*/
+	char *lineptr_duplicate = NULL; /* variable to contain the copy of the string to be passe to strtok. */
 	size_t n = 0; /* size_t store the assigned size in bytes;  [getline function] */
 	size_t readCharacterCount; /* variable for EOF */
+	const char *delimiters = "\n";
 	/* declaring void variables */
 	(void)arc;
 	(void)argv;
